@@ -52,45 +52,45 @@
 				//설마 해를 넘기지는 않겠죠?
 				if (lst31.indexOf(month)!=-1)//선택한 달이 31일으로 이루어져 있으면
 				{
-					if(dday%31>0){
+					if(dday>31){
 						dday=dday%31;
 						dmonth=dmonth+1;
 					}
-					if(iday%31>0){
+					if(iday>31){
 						iday=iday%31;
 						imonth=imonth+1;
 					}
-					if(mday%31>0){
+					if(mday>31){
 						mday=mday%31;
 						mmonth=mmonth+1;
 					}
 				}
 				else if(lst30.indexOf(month)!=-1)//선택한 달이 30일으로 이루어져 있으면
 				{
-					if(dday%30>0){
+					if(dday>30){
 						dday=dday%30;
 						dmonth=dmonth+1;
 					}
-					if(iday%30>0){
+					if(iday>30){
 						iday=iday%30;
 						imonth=imonth+1;
 					}
-					if(mday%30>0){
+					if(mday>30){
 						mday=mday%30;
 						mmonth=mmonth+1;
 					}
 				}
 				else if(lst28.indexOf(month)!=-1)//선택한 달이 28일으로 이루어져 있으면
 				{
-					if(dday%28>0){
+					if(dday>28){
 						dday=dday%28;
 						dmonth=dmonth+1;
 					}
-					if(iday%28>0){
+					if(iday>28){
 						iday=iday%28;
 						imonth=imonth+1;
 					}
-					if(mday%28>0){
+					if(mday>28){
 						mday=mday%28;
 						mmonth=mmonth+1;
 					}
