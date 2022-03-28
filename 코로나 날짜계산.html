@@ -23,10 +23,10 @@
 			<button onclick="ninput()">입력</button>
 		</div>
 
-		<textarea id="goutput"></textarea><!---여기에 출력--->
-		<textarea id="d"></textarea>
-		<textarea id="i"></textarea>
-		<textarea id="m"></textarea>
+		<textarea id="goutput" rows="10"></textarea><!---여기에 출력--->
+		<textarea id="d" rows="10"></textarea>
+		<textarea id="i" rows="10"></textarea>
+		<textarea id="m" rows="10"></textarea>
 
 		<script type="text/javascript">
 			var gtmp;//구분 저장
@@ -61,8 +61,8 @@
 						imonth=imonth+1;
 					}
 					if(mday>31){
+						mmonth=mmonth+parseInt(mday/31);
 						mday=mday%31;
-						mmonth=mmonth+2;
 					}
 				}
 				else if(lst30.indexOf(month)!=-1)//선택한 달이 30일으로 이루어져 있으면
@@ -76,8 +76,8 @@
 						imonth=imonth+1;
 					}
 					if(mday>30){
+						mmonth=mmonth+parseInt(mday/30);
 						mday=mday%30;
-						mmonth=mmonth+2;
 					}
 				}
 				else if(lst28.indexOf(month)!=-1)//선택한 달이 28일으로 이루어져 있으면
@@ -91,8 +91,8 @@
 						imonth=imonth+1;
 					}
 					if(mday>28){
+						mmonth=mmonth+parseInt(mday/28);
 						mday=mday%28;
-						mmonth=mmonth+2;
 					}
 				}
 			}
