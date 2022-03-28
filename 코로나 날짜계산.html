@@ -24,7 +24,9 @@
 		</div>
 
 		<textarea id="goutput"></textarea><!---여기에 출력--->
-		<textarea id="noutput"></textarea>
+		<textarea id="d"></textarea>
+		<textarea id="i"></textarea>
+		<textarea id="m"></textarea>
 
 		<script type="text/javascript">
 			var gtmp;//구분 저장
@@ -120,6 +122,9 @@
 				날짜계산()
 				if (gtmp=="확진자"){
 					document.getElementById("goutput").value="확진자-\n7일간 등교중지 및 10일간 기숙사 입사 불가";
+					document.getElementById("d").value=String(year)+"년"+String(dmonth)+"월"+String(dday)+"일부터 등교 가능합니다."
+					document.getElementById("i").value=String(year)+"년"+String(imonth)+"월"+String(iday)+"일부터 기숙사 입사 가능합니다."
+					document.getElementById("m").value=String(year)+"년"+String(mmonth)+"월"+String(mday)+"일까지 수동감시 면제입니다."
 					
 				}
 				else if(gtmp=="수동감시자"){
