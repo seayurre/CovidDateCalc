@@ -47,7 +47,7 @@
 				var lst28=[2];
 				dday=day+7;
 				iday=day+10;
-				mday=day+45;
+				mday=day+46;
 
 				//설마 해를 넘기지는 않겠죠?
 				if (lst31.indexOf(month)!=-1)//선택한 달이 31일으로 이루어져 있으면
@@ -62,7 +62,7 @@
 					}
 					if(mday>31){
 						mday=mday%31;
-						mmonth=mmonth+1;
+						mmonth=mmonth+2;
 					}
 				}
 				else if(lst30.indexOf(month)!=-1)//선택한 달이 30일으로 이루어져 있으면
@@ -77,7 +77,7 @@
 					}
 					if(mday>30){
 						mday=mday%30;
-						mmonth=mmonth+1;
+						mmonth=mmonth+2;
 					}
 				}
 				else if(lst28.indexOf(month)!=-1)//선택한 달이 28일으로 이루어져 있으면
@@ -92,7 +92,7 @@
 					}
 					if(mday>28){
 						mday=mday%28;
-						mmonth=mmonth+1;
+						mmonth=mmonth+2;
 					}
 				}
 			}
@@ -124,12 +124,14 @@
 					document.getElementById("goutput").value="확진자-\n7일간 등교중지 및 10일간 기숙사 입사 불가";
 					document.getElementById("d").value=String(year)+"년"+String(dmonth)+"월"+String(dday)+"일부터 등교 가능합니다."
 					document.getElementById("i").value=String(year)+"년"+String(imonth)+"월"+String(iday)+"일부터 기숙사 입사 가능합니다."
-					document.getElementById("m").value=String(year)+"년"+String(mmonth)+"월"+String(mday)+"일까지 수동감시 면제입니다."
+					document.getElementById("m").value=String(year)+"년"+String(mmonth)+"월"+String(mday)+"일부터 신속항원검사 가능합니다."
 					
 				}
 				else if(gtmp=="수동감시자"){
 					document.getElementById("goutput").value="수동감시자-\n등교 가능 및 10일간 기숙사 입사 불가";
-					document.getElementById("d").value=String(year)+"년"+String(imonth)+"월"+String(iday)+"일부터 기숙사 입사 가능합니다."
+					document.getElementById("d").value="바로 등교 가능합니다."
+					document.getElementById("i").value=String(year)+"년"+String(imonth)+"월"+String(iday)+"일부터 기숙사 입사 가능합니다."
+					document.getElementById("m").value="바로 신속항원검사 가능합니다."
 				}
 				
 			}
